@@ -15,7 +15,7 @@
 </head>
 
 <body onload="init()">
-	<canvas id="canvas-id" width="1920" height="1080"></canvas>
+	<canvas id="canvas-id" width="800" height="600"></canvas>
 	<script>
 		function areColliding(Ax, Ay, Awidth, Aheight, Bx, By, Bwidth, Bheight) {
 			if (Bx <= Ax + Awidth) {
@@ -81,7 +81,7 @@
 		}
 
 
-		let endlessCanvas = true;
+		let endlessCanvas = false;
 		let updateTime = 6; // in ms
 
 		const canvas = document.getElementById("canvas-id");
@@ -98,7 +98,7 @@
 		let key_a = 65;
 		let key_z = 90;
 		let isKeyPressed = [];
-		for (i = 0; i < 256; ++i) {
+		for (let i = 0; i < 256; ++i) {
 			isKeyPressed.push(0);
 		}
 		// gridSize = 50; // uncomment or add to game.js if you want a grid
@@ -106,7 +106,7 @@
 			setTimeout(callback, 1000 / 30);
 		};
 		function redraw() {
-				context.clearRect(0, 0, canvas.width, canvas.height);
+			//context.clearRect(0, 0, canvas.width, canvas.height);
 			draw(); // call progammer's draw() function
 			context.globalAlpha = 1;
 			// draw grid
