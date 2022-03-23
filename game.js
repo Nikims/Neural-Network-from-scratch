@@ -7,7 +7,7 @@ flowers = JSON.parse(
 drawingGrid = [];
 for (i = 0; i < 22; i++) {
   drawingGrid[i] = [];
-  for (j = 0; j < grid[i].length; j++) {
+  for (j = 0; j < drawingGrid[i].length; j++) {
     drawingGrid[i][j] = 0;
   }
 }
